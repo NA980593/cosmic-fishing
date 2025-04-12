@@ -1,11 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=15 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c2ocdwvb71mcg" path="res://assets/beautiful-shining-stars-night-sky.jpg" id="2_sugp2"]
-[ext_resource type="PackedScene" path="res://scenes/Fishing Rod.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dwr5ct37gp3g3" path="res://scenes/Fishing Rod.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="ArrayMesh" uid="uid://cdrtoohebcnj4" path="res://assets/3d_models/Fish.obj" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c2oxhs0he4a6d" path="res://scenes/TeresaCube.tscn" id="7_o6xl0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
 panorama = ExtResource("2_sugp2")
@@ -40,7 +41,7 @@ environment = SubResource("Environment_jyhfs")
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(0.771218, 0, -0.637, 0, 1, 0, 0.637, 0, 0.771218, 0.315388, 1, -0.679698)
+transform = Transform3D(0.276657, 0, 0.96126, 0, 1, 0, -0.96126, 0, 0.276657, 0.315388, 1, -0.679698)
 visible = false
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
@@ -99,3 +100,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98085, 0.471156, -2.14785)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="FishPond"]
 transform = Transform3D(-0.05, 0, 0, 0, 2.18557e-09, -0.05, 0, 0.05, 2.18557e-09, -1.75969, 1.32953, -0.736)
 mesh = ExtResource("6_tefeu")
+
+[node name="TeresaCube" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, 0, 2, -7)
+
+[node name="TeresaCube2" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, 0, 5, -6)
+
+[node name="TeresaCube3" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, 3, 4, -3)
+
+[node name="TeresaCube4" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, -3, 4, -4)
+
+[node name="TeresaCube9" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, 1, 8, -3)
+
+[node name="TeresaCube10" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.952277, 0, 0.304697, 0, 1, 0, -0.304697, 0, 0.952277, -3, 7, -3)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.773519, 2.04944, -3.0226)
+omni_range = 5.672
+omni_attenuation = 0.3
