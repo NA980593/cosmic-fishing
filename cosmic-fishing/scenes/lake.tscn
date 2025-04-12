@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://claug153o1qcs"]
+[gd_scene load_steps=5 format=3 uid="uid://claug153o1qcs"]
 
 [ext_resource type="PackedScene" uid="uid://o82ug7swlpdj" path="res://scenes/fishing_land.tscn" id="1_fkw7t"]
 [ext_resource type="PackedScene" uid="uid://112d3c0dtp35" path="res://scenes/water_plane.tscn" id="2_4p5pm"]
+[ext_resource type="PackedScene" uid="uid://ctkxdj75iung7" path="res://scenes/fish_area.tscn" id="3_4p5pm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1x1k"]
+size = Vector3(53.9277, 3.21783, 53.5195)
 
 [node name="Lake" type="Node3D"]
 
 [node name="FishingLand" parent="." instance=ExtResource("1_fkw7t")]
 
 [node name="WaterPlane" parent="." instance=ExtResource("2_4p5pm")]
+
+[node name="FishArea" parent="." instance=ExtResource("3_4p5pm")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FishArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0362244, -0.926239, -0.132568)
+shape = SubResource("BoxShape3D_m1x1k")
