@@ -1,14 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=7 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://c2ocdwvb71mcg" path="res://assets/beautiful-shining-stars-night-sky.jpg" id="2_sugp2"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
+panorama = ExtResource("2_sugp2")
 
 [sub_resource type="Sky" id="Sky_sugp2"]
-sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
 background_mode = 2
