@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8yi8r0ysf4k0"]
+[gd_scene load_steps=17 format=3 uid="uid://b8yi8r0ysf4k0"]
 
 [ext_resource type="PackedScene" uid="uid://bjwomr5hex8qj" path="res://scenes/floating_island.tscn" id="1_cusal"]
 [ext_resource type="PackedScene" uid="uid://bg0gniqk2b84p" path="res://scenes/chair.tscn" id="2_if3nh"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d6v3gyans7sp" path="res://scenes/flowers/flower_1_clump.tscn" id="13_i741q"]
 [ext_resource type="PackedScene" uid="uid://cx6h0lx5mb2n1" path="res://scenes/flowers/flower_1.tscn" id="14_33bhx"]
 [ext_resource type="PackedScene" uid="uid://bduccv5xf77e2" path="res://scenes/toilet.tscn" id="15_pt7ob"]
+[ext_resource type="PackedScene" uid="uid://cwgf4fubnhfuc" path="res://scenes/bridge.tscn" id="16_ynb76"]
 
 [node name="FishingIsland" type="Node3D"]
 
@@ -25,19 +26,19 @@ transform = Transform3D(15, 0, 0, 0, 9.22, 0, 0, 0, 15, 0, 2.31982, 0)
 transform = Transform3D(-0.0361841, -0.0104228, -0.999291, -0.276795, 0.960929, 0, 0.960248, 0.276598, -0.0376553, 5.22478, 7.75695, 0.429237)
 
 [node name="NormalTree_1" parent="." instance=ExtResource("3_akdl5")]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 1.40005, 7.3034, 5.73699)
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 1.40005, 7.3034, 5.73699)
 
 [node name="NormalTree_2" parent="." instance=ExtResource("4_pt7ob")]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 3.54015, 7.06086, 5.37985)
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 3.54015, 7.06086, 5.37985)
 
 [node name="NormalTree_3" parent="." instance=ExtResource("5_ynb76")]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 2.16609, 7.22834, 3.54341)
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 2.16609, 7.22834, 3.54341)
 
 [node name="NormalTree_4" parent="." instance=ExtResource("6_l4ygw")]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -1.55241, 7.28961, -2.06134)
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -1.55241, 7.28961, -2.06134)
 
 [node name="NormalTree_5" parent="." instance=ExtResource("7_g346q")]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.0364471, 7.31659, -2.60349)
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -0.0364471, 7.31659, -2.60349)
 
 [node name="Rock_1" parent="." instance=ExtResource("8_ammdg")]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 4.38233, 6.80641, 4.00407)
@@ -61,4 +62,7 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 2.47079, 7.16853, -4.22481)
 
 [node name="Toilet" parent="." instance=ExtResource("15_pt7ob")]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1, 5.66943, -16)
+transform = Transform3D(0.229098, 0, 0.973403, 0, 1, 0, -0.973403, 0, 0.229098, 1, 5.66943, -17.3778)
+
+[node name="Bridge" parent="." instance=ExtResource("16_ynb76")]
+transform = Transform3D(-0.000189122, 0.000128266, -0.00799674, 0.00125254, 0.00790074, 9.71038e-05, 0.00789908, -0.00124974, -0.000206858, 0.438304, 4.23703, -9.59551)

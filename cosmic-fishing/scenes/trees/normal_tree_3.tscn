@@ -23,7 +23,7 @@ resource_name = "NormalTree_Leaves"
 transparency = 4
 albedo_texture = ExtResource("3_dynoa")
 metallic = 0.4
-roughness = 0.301511
+roughness = 0.85
 metadata/extras = {
 "fromFBX": {
 "isTruePBR": false,
