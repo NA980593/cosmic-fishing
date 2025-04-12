@@ -1,6 +1,7 @@
-extends Area3D
+extends Node3D
 
 var rand = RandomNumberGenerator.new()
+var playerScene = "res://scenes/player.tscn"
 
 func _ready():
 	rand.randomize()
@@ -11,8 +12,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$FishTimer.wait_time = bobtime
 		$FishTimer.start()
 
-
 func _on_fish_timer_timeout() -> void:
-	#Give Haptic feedback to controller.
-	#Call some function on player that awaits a collision
-	pass
+	playerScene.onTheLine()

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bowx1u2xee3hd"]
+
+[ext_resource type="PackedScene" uid="uid://b10d6v2ik2k4n" path="res://assets/3d_models/Cardboard Box Open.glb" id="1_o1o24"]
+
+[node name="Cardboard Box Open" instance=ExtResource("1_o1o24")]

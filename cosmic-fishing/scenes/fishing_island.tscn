@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8yi8r0ysf4k0"]
+[gd_scene load_steps=22 format=3 uid="uid://b8yi8r0ysf4k0"]
 
 [ext_resource type="PackedScene" uid="uid://bjwomr5hex8qj" path="res://scenes/floating_island.tscn" id="1_cusal"]
 [ext_resource type="PackedScene" uid="uid://bg0gniqk2b84p" path="res://scenes/chair.tscn" id="2_if3nh"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://lrmajfhpu1to" path="res://scenes/grass/grass_large_extruded.tscn" id="18_ammdg"]
 [ext_resource type="PackedScene" uid="uid://bgci3qv08gwa1" path="res://scenes/beer.tscn" id="19_ammdg"]
 [ext_resource type="PackedScene" uid="uid://djrhidq0wmmol" path="res://scenes/dingus.tscn" id="20_njxkt"]
+[ext_resource type="PackedScene" uid="uid://bowx1u2xee3hd" path="res://scenes/cardboard_box_open.tscn" id="21_6jryo"]
 
 [node name="FishingIsland" type="Node3D"]
 
@@ -81,4 +82,7 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71571, 7.52964, -0.10755)
 
 [node name="Dingus" parent="." instance=ExtResource("20_njxkt")]
-transform = Transform3D(-0.0682624, 0, 0.073077, 0, 0.1, 0, -0.073077, 0, -0.0682624, 5.39055, 6.99732, 2.11629)
+transform = Transform3D(-0.0218876, 0, 0.0975753, 0, 0.1, 0, -0.0975753, 0, -0.0218876, 5.28017, 6.99732, 2.19281)
+
+[node name="Cardboard Box Open" parent="." instance=ExtResource("21_6jryo")]
+transform = Transform3D(1.43831, 0.105675, 0.412412, -0.134474, 1.49143, 0.0868261, -0.40394, -0.120228, 1.43958, 5.5509, 6.92471, 2.34082)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfqq70o3aev2w"]
 
-[ext_resource type="Script" uid="uid://mqg2i1r4ad3q" path="res://scenes/fish_area.gd" id="1_87i0i"]
+[ext_resource type="Script" uid="uid://ci7top2wt01ym" path="res://scripts/fish_area.gd" id="1_87i0i"]
 
 [node name="FishArea" type="Area3D"]
 script = ExtResource("1_87i0i")
