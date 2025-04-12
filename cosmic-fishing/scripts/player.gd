@@ -44,3 +44,6 @@ func _update_hand_pose() -> void:
 		hand.set_hand_pose("grip") 
 	else:
 		hand.set_hand_pose("open")
+
+func onTheLine():
+	pass

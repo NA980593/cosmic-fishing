@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://1gljbhde3431"]
+[gd_scene load_steps=7 format=3 uid="uid://1gljbhde3431"]
 
 [ext_resource type="Script" uid="uid://bav3wqe227a4m" path="res://scripts/player.gd" id="1_dqkch"]
+[ext_resource type="PackedScene" uid="uid://blx5demimr6fh" path="res://scenes/fish_light.tscn" id="1_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="4_qlg0r"]
@@ -10,6 +11,9 @@
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.979586, 0.201027, 0, -0.201027, 0.979586, 0, 1.7, 0.4)
+
+[node name="FishLight" parent="XRCamera3D" instance=ExtResource("1_tuyoq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, -0.3, -0.9)
 
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)

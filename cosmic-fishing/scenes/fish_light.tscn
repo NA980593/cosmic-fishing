@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://blx5demimr6fh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edvy0"]
+albedo_color = Color(0.537255, 0.0313726, 0.0705882, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qjrqi"]
+material = SubResource("StandardMaterial3D_edvy0")
+radius = 0.06
+height = 0.12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7a3q"]
+albedo_color = Color(0.788235, 0.0823529, 0.168627, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_opywi"]
+material = SubResource("StandardMaterial3D_v7a3q")
+radius = 0.04
+height = 0.4
+
+[node name="FishLight" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0227652, 0.407184, 0.05192)
+visible = false
+light_color = Color(1, 1, 0, 1)
+omni_range = 0.25
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_qjrqi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449663, 0)
+mesh = SubResource("CapsuleMesh_opywi")

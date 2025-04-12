@@ -115,6 +115,13 @@ var _highlighted : bool = false
 @onready var original_collision_mask : int = collision_mask
 @onready var original_collision_layer : int = collision_layer
 
+@onready var beer_particles: CPUParticles3D = $CPUParticles3D
+
+func _physics_process(delta: float) -> void:
+	if abs(rad_to_deg(rotation.x)) > 35 or abs(rad_to_deg(rotation.y)) > 35 or abs(rad_to_deg(rotation.z)) > 35:
+		beer_particles.emitting = true
+	else:
+		beer_particles.emitting = false
 
 # Add support for is_xr_class on XRTools classes
 func is_xr_class(name : String) -> bool:
@@ -432,9 +439,6 @@ func _get_grab_point(grabber : Node3D, current : XRToolsGrabPoint) -> XRToolsGra
 	# Return the best grab point
 	print_verbose("%s> picked grab-point %s" % [name, point])
 	return point
-
-func _process(delta):
-	rotate_y(2 * delta)
 
 func _set_ranged_grab_method(new_value: int) -> void:
 	ranged_grab_method = new_value
