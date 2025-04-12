@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://blx5demimr6fh"]
+[gd_scene load_steps=6 format=3 uid="uid://blx5demimr6fh"]
+
+[ext_resource type="Script" uid="uid://dwckjwly6tqg7" path="res://scenes/fish_light.gd" id="1_qjrqi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edvy0"]
 albedo_color = Color(0.537255, 0.0313726, 0.0705882, 1)
@@ -13,10 +15,11 @@ albedo_color = Color(0.788235, 0.0823529, 0.168627, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_opywi"]
 material = SubResource("StandardMaterial3D_v7a3q")
-radius = 0.04
-height = 0.4
+radius = 0.06
+height = 0.5
 
 [node name="FishLight" type="Node3D"]
+script = ExtResource("1_qjrqi")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0227652, 0.407184, 0.05192)
