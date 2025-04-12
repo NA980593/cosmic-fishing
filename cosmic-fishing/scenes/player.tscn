@@ -15,6 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 
 [node name="FishLight" parent="XRCamera3D" instance=ExtResource("1_tuyoq")]
 transform = Transform3D(0.978568, 0.0169275, -0.205227, -0.0528184, 0.983908, -0.170696, 0.199034, 0.177877, 0.963715, 0.566329, -0.129587, -1.83599)
+visible = false
 
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
