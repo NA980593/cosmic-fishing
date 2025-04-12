@@ -23,11 +23,6 @@ glow_enabled = true
 data = PackedVector3Array(-2, 0.15, 2, 2, 0.15, 2, -2, -0.15, 2, 2, 0.15, 2, 2, -0.15, 2, -2, -0.15, 2, 2, 0.15, -2, -2, 0.15, -2, 2, -0.15, -2, -2, 0.15, -2, -2, -0.15, -2, 2, -0.15, -2, 2, 0.15, 2, 2, 0.15, -2, 2, -0.15, 2, 2, 0.15, -2, 2, -0.15, -2, 2, -0.15, 2, -2, 0.15, -2, -2, 0.15, 2, -2, -0.15, -2, -2, 0.15, 2, -2, -0.15, 2, -2, -0.15, -2, 2, 0.15, 2, -2, 0.15, 2, 2, 0.15, -2, -2, 0.15, 2, -2, 0.15, -2, 2, 0.15, -2, -2, -0.15, 2, 2, -0.15, 2, -2, -0.15, -2, 2, -0.15, 2, 2, -0.15, -2, -2, -0.15, -2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyhfs"]
-transparency = 1
-albedo_color = Color(0, 0.0470588, 0.152941, 1)
-metallic = 0.2
-roughness = 0.0
-clearcoat_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
 material = SubResource("StandardMaterial3D_jyhfs")
@@ -42,14 +37,10 @@ script = ExtResource("1_rtd14")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jyhfs")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(-0.630263, 0, 0.776955, 0, 1, 0, -0.776955, 0, -0.630263, 0.315388, 1, -0.679698)
+transform = Transform3D(0.771218, 0, -0.637, 0, 1, 0, 0.637, 0, 0.771218, 0.315388, 1, -0.679698)
 visible = false
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
