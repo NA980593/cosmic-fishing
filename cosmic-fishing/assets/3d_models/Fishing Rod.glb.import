@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Fishing Rod.glb-f14980cb976c16714b60ca9bdd7c7
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
