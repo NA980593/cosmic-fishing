@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://1gljbhde3431"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qhqgy"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dqkch"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="XROrigin3D" type="XROrigin3D"]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.4)
+
+[node name="LeftHand" type="XRController3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"/user/hand_tracker/left"
+
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand"]
+mesh = SubResource("BoxMesh_qhqgy")
+
+[node name="RightHand" type="XRController3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"/user/hand_tracker/right"
+
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RightHand"]
+mesh = SubResource("BoxMesh_dqkch")
