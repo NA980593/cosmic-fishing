@@ -2,6 +2,8 @@ extends Node3D
 
 var xr_interface: XRInterface
 
+@onready var fisher_rod: XRToolsPickable = $"Fisher Rod"
+
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
 	if xr_interface and xr_interface.is_initialized():
@@ -14,3 +16,7 @@ func _ready():
 		get_viewport().use_xr = true
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
+
+
+func _physics_process(delta: float) -> void:
+	$Control/ColorRect/Label.text = fisher_rod.linear_velocity

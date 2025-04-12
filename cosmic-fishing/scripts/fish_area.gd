@@ -1,7 +1,8 @@
 extends Node3D
 
 var rand = RandomNumberGenerator.new()
-var playerScene = "res://scenes/player.tscn"
+
+signal on_the_line # connect this to the player scene later when everything is added to main
 
 func _ready():
 	rand.randomize()
@@ -13,4 +14,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$FishTimer.start()
 
 func _on_fish_timer_timeout() -> void:
-	playerScene.onTheLine()
+	emit_signal("on_the_line")

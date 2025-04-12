@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://claug153o1qcs"]
+[gd_scene load_steps=17 format=3 uid="uid://claug153o1qcs"]
 
 [ext_resource type="PackedScene" uid="uid://o82ug7swlpdj" path="res://scenes/fishing_land.tscn" id="1_fkw7t"]
 [ext_resource type="PackedScene" uid="uid://112d3c0dtp35" path="res://scenes/water_plane.tscn" id="2_4p5pm"]
@@ -11,11 +11,28 @@
 [ext_resource type="PackedScene" uid="uid://ddeon5awnnfbc" path="res://scenes/house.tscn" id="9_ef04q"]
 [ext_resource type="PackedScene" uid="uid://c72q52i0o7bu6" path="res://scenes/rocketship.tscn" id="10_agp4v"]
 [ext_resource type="PackedScene" uid="uid://bcdjv2vjcqyod" path="res://assets/3d_models/Dog in plane.glb" id="11_q3vtt"]
+[ext_resource type="PackedScene" uid="uid://3715ntwlsfnx" path="res://scenes/bobber.tscn" id="12_fb754"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fb754"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_vgyou"]
+sky_material = SubResource("ProceduralSkyMaterial_fb754")
+
+[sub_resource type="Environment" id="Environment_722fv"]
+background_mode = 2
+sky = SubResource("Sky_vgyou")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m1x1k"]
 size = Vector3(53.9277, 3.21783, 53.5195)
 
 [node name="Lake" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_722fv")
 
 [node name="FishingLand" parent="." instance=ExtResource("1_fkw7t")]
 
@@ -125,3 +142,9 @@ transform = Transform3D(2.69683, -1.31306, 0.0543627, 1.29445, 2.67549, 0.407637
 
 [node name="Dog in plane" parent="." instance=ExtResource("11_q3vtt")]
 transform = Transform3D(-3.53041, 0, -1.88048, 0, 4, 0, 1.88048, 0, -3.53041, 4.34001, 14.1753, -26.2056)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.177291, 0, -0.984159, 0, 1, 0, 0.984159, 0, -0.177291, -31.7575, 8.34127, 0)
+
+[node name="Bobber" parent="." instance=ExtResource("12_fb754")]
+transform = Transform3D(-0.018988, 0, 0.99982, 0, 1, 0, -0.99982, 0, -0.018988, -27.4791, 12.8946, -0.0286738)
