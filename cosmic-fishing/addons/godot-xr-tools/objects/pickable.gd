@@ -433,6 +433,8 @@ func _get_grab_point(grabber : Node3D, current : XRToolsGrabPoint) -> XRToolsGra
 	print_verbose("%s> picked grab-point %s" % [name, point])
 	return point
 
+func _process(delta):
+	rotate_y(2 * delta)
 
 func _set_ranged_grab_method(new_value: int) -> void:
 	ranged_grab_method = new_value
