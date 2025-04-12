@@ -19,4 +19,4 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	$Control/ColorRect/Label.text = fisher_rod.linear_velocity
+	$Control/ColorRect/Label.text = str(fisher_rod.linear_velocity)
