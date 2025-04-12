@@ -1,2 +1,1 @@
-Schrödingers Catch: the schrodingering 
-TROUT OF THIS WORLD!!!
+Schrödingers Catch: TROUT OF THIS WORLD!!!
