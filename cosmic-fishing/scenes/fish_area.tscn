@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfqq70o3aev2w"]
+[gd_scene load_steps=3 format=3 uid="uid://ctkxdj75iung7"]
 
-[ext_resource type="Script" uid="uid://ci7top2wt01ym" path="res://scenes/fish_area.gd" id="1_87i0i"]
+[ext_resource type="Script" uid="uid://ci7top2wt01ym" path="res://scripts/fish_area.gd" id="1_87i0i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_un572"]
 size = Vector3(30.1, 0.3, 30.1)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://o82ug7swlpdj"]
+
+[ext_resource type="PackedScene" uid="uid://da4nd76nmmqj5" path="res://assets/3d_models/land.glb" id="1_yi0qb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yi0qb"]
+resource_name = "mat9"
+albedo_color = Color(0.556393, 0.767376, 0.293372, 1)
+metallic = 1.0
+emission_enabled = true
+
+[node name="FishingLand" instance=ExtResource("1_yi0qb")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_yi0qb")
