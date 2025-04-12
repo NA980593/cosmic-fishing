@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://1gljbhde3431"]
+[gd_scene load_steps=4 format=3 uid="uid://1gljbhde3431"]
 
 [ext_resource type="PackedScene" uid="uid://bu07alt6vkbaq" path="res://addons/godot-xr-tools/hands/model/Hand_Glove_L.gltf" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://w7th3d2hl7b5" path="res://addons/godot-xr-tools/hands/model/Hand_Glove_R.gltf" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_qhqgy"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.4)
+transform = Transform3D(1, 0, 0, 0, 0.979586, 0.201027, 0, -0.201027, 0.979586, 0, 1.7, 0.4)
 
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
@@ -23,3 +24,5 @@ tracker = &"right_hand"
 [node name="Hand_Glove_R" parent="RightHand" instance=ExtResource("2_qhqgy")]
 
 [node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
+
+[node name="FunctionPickup" parent="RightHand" instance=ExtResource("3_qhqgy")]
