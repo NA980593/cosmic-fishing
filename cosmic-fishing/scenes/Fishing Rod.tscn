@@ -9,6 +9,7 @@ height = 1.99707
 radius = 0.02
 
 [node name="Fishing Rod" instance=ExtResource("1_8l6o6")]
+transform = Transform3D(0.369842, 0, 0.929091, 0, 1, 0, -0.929091, 0, 0.369842, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979732, 0)
