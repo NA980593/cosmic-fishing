@@ -1,10 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cup3ujdqtop76"]
+[gd_scene load_steps=3 format=3 uid="uid://1gljbhde3431"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_qhqgy"]
-size = Vector3(0.3, 0.3, 0.3)
-
-[sub_resource type="BoxMesh" id="BoxMesh_dqkch"]
-size = Vector3(0.1, 0.1, 0.1)
+[ext_resource type="PackedScene" uid="uid://bu07alt6vkbaq" path="res://addons/godot-xr-tools/hands/model/Hand_Glove_L.gltf" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://w7th3d2hl7b5" path="res://addons/godot-xr-tools/hands/model/Hand_Glove_R.gltf" id="2_qhqgy"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
 
@@ -15,16 +12,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
-[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand"]
+[node name="Hand_Glove_L" parent="LeftHand" instance=ExtResource("1_g2els")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand"]
-mesh = SubResource("BoxMesh_qhqgy")
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand"]
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
-[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
+[node name="Hand_Glove_R" parent="RightHand" instance=ExtResource("2_qhqgy")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RightHand"]
-mesh = SubResource("BoxMesh_dqkch")
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
