@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c2ocdwvb71mcg" path="res://assets/beautiful-shining-stars-night-sky.jpg" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://dwr5ct37gp3g3" path="res://scenes/Fishing Rod.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" path="res://scenes/Fishing Rod.tscn" id="4_jyhfs"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
 panorama = ExtResource("2_sugp2")
@@ -47,7 +47,9 @@ shadow_enabled = true
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.315388, 1, -0.679698)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
