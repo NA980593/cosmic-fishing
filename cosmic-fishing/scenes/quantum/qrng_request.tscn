@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://gg7657hwrkww"]
+
+[ext_resource type="Script" uid="uid://bfik8170kvvrh" path="res://scripts/quantum/qrng_request.gd" id="1_8ywi0"]
+
+[node name="QrngRequest" type="Node"]
+script = ExtResource("1_8ywi0")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "TEST"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

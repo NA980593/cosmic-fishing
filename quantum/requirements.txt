@@ -1,0 +1,4 @@
+qiskit
+Flask
+qiskit-aer
+gunicorn
