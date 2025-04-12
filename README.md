@@ -1,1 +1,2 @@
-##Schrödingers Catch: the schrodingering 
+Schrödingers Catch: the schrodingering 
+what the BITE?!
