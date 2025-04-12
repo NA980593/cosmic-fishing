@@ -27,7 +27,7 @@ clearcoat_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
 material = SubResource("StandardMaterial3D_jyhfs")
-size = Vector3(4, 0.3, 4)
+size = Vector3(7, 0.5, 7)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(3.5, 1, 3.5)
@@ -48,7 +48,8 @@ shadow_enabled = true
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(0.891643, 0, -0.452916, 0, 1, 0, 0.452916, 0, 0.891643, 0.315388, 1, -0.679698)
+transform = Transform3D(0.980031, 0, -0.199875, 0, 1, 0, 0.199875, 0, 0.980031, 0.315388, 1, -0.679698)
+visible = false
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
