@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwr5ct37gp3g3"]
+[gd_scene load_steps=5 format=3 uid="uid://cxb7h4v1qe3u"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_8l6o6"]
 [ext_resource type="ArrayMesh" uid="uid://bbb545ei8la6v" path="res://assets/3d_models/Fishing Rod.obj" id="2_t472n"]
@@ -9,7 +9,7 @@ height = 1.99707
 radius = 0.02
 
 [node name="Fishing Rod" instance=ExtResource("1_8l6o6")]
-transform = Transform3D(0.369842, 0, 0.929091, 0, 1, 0, -0.929091, 0, 0.369842, 0, 0, 0)
+transform = Transform3D(-0.186844, 0, 0.982368, 0, 1, 0, -0.982368, 0, -0.186844, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979732, 0)

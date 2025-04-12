@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cwgf4fubnhfuc" path="res://scenes/bridge.tscn" id="16_ynb76"]
 [ext_resource type="PackedScene" uid="uid://b3s6nemella2q" path="res://scenes/grass/grass_small.tscn" id="17_g346q"]
 [ext_resource type="PackedScene" uid="uid://lrmajfhpu1to" path="res://scenes/grass/grass_large_extruded.tscn" id="18_ammdg"]
-[ext_resource type="PackedScene" uid="uid://djrfvrrmpyfwm" path="res://scenes/beer.tscn" id="19_ammdg"]
+[ext_resource type="PackedScene" uid="uid://bgci3qv08gwa1" path="res://scenes/beer.tscn" id="19_ammdg"]
 
 [node name="FishingIsland" type="Node3D"]
 
@@ -76,5 +76,5 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 [node name="Grass_Large_Extruded" parent="." instance=ExtResource("18_ammdg")]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 1.18314, 7.264, 0)
 
-[node name="BEER" parent="." instance=ExtResource("19_ammdg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55746, 7.87617, -0.31052)
+[node name="Beer" parent="." instance=ExtResource("19_ammdg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71571, 7.52964, -0.10755)
