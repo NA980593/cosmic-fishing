@@ -1,11 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=18 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c2ocdwvb71mcg" path="res://assets/beautiful-shining-stars-night-sky.jpg" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://cxb7h4v1qe3u" path="res://scenes/Fishing Rod.tscn" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://gy68j44x47c2" path="res://addons/godot-xr-tools/player/player_body.gd" id="5_choun"]
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://chsh3tl4xgia2" path="res://assets/3d_models/pokeball.glb" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
@@ -52,16 +50,8 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
-[node name="PlayerBody" type="CharacterBody3D" parent="XROrigin3D" groups=["player_body"] instance=ExtResource("4_85g3d")]
-process_priority = -100
-process_physics_priority = -100
-top_level = true
-collision_layer = 524288
-collision_mask = 1023
-script = ExtResource("5_choun")
-
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(0.991748, 0, -0.135461, 0, 1, 0, 0.135461, 0, 0.991748, 0.315388, 1, -0.679698)
+transform = Transform3D(-0.222789, 0, -0.975841, 0, 1, 0, 0.975841, 0, -0.222789, 0.315388, 1, -0.679698)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
@@ -129,7 +119,7 @@ omni_range = 5.672
 omni_attenuation = 0.3
 
 [node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(0.48622, 0, 0.87414, 0, 1, 0, -0.87414, 0, 0.48622, 0, 1, -1)
+transform = Transform3D(0.827622, 0, -0.561748, 0, 1, 0, 0.561748, 0, 0.827622, 0, 1, -1)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
