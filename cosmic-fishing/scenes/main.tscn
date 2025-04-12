@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=19 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://chsh3tl4xgia2" path="res://assets/3d_models/pokeball.glb" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
 panorama = ExtResource("2_sugp2")
@@ -51,7 +52,7 @@ environment = SubResource("Environment_jyhfs")
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(-0.222789, 0, -0.975841, 0, 1, 0, 0.975841, 0, -0.222789, 0.315388, 1, -0.679698)
+transform = Transform3D(0.421337, 0, -0.907832, 0, 1, 0, 0.907832, 0, 0.421337, 0.315388, 1, -0.679698)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
@@ -119,23 +120,7 @@ omni_range = 5.672
 omni_attenuation = 0.3
 
 [node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(0.827622, 0, -0.561748, 0, 1, 0, 0.561748, 0, 0.827622, 0, 1, -1)
+transform = Transform3D(0.998187, 0, 0.0626315, 0, 1, 0, -0.0626315, 0, 0.998187, 0, 1, -1)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_right = 322.0
-offset_bottom = 99.0
-
-[node name="Label" type="Label" parent="Control/ColorRect"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
+transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 1.39506, -2.43414)

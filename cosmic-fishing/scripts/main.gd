@@ -4,6 +4,8 @@ var xr_interface: XRInterface
 
 @onready var fisher_rod: XRToolsPickable = $"Fisher Rod"
 
+@onready var testing_values_in_vr: Node3D = $TestingValuesInVR
+
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
 	if xr_interface and xr_interface.is_initialized():
@@ -19,4 +21,4 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	$Control/ColorRect/Label.text = str(fisher_rod.linear_velocity)
+	testing_values_in_vr.set_label(str(fisher_rod.linear_velocity))

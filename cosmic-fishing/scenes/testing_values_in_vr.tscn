@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://3rtpjm1we343"]
+
+[ext_resource type="Script" uid="uid://d2so16qa1wrx7" path="res://scripts/testing_values_in_vr.gd" id="1_8w1xk"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h8t4x"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8w1xk"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_h8t4x")
+
+[sub_resource type="QuadMesh" id="QuadMesh_4hoy3"]
+
+[node name="TestingValuesInVR" type="Node3D"]
+script = ExtResource("1_8w1xk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8w1xk")
+mesh = SubResource("QuadMesh_4hoy3")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Control" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport/Control"]
+offset_right = 272.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="SubViewport/Control/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "test"
