@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=17 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -20,6 +20,10 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tefeu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tefeu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tefeu"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jyhfs"]
 data = PackedVector3Array(-2, 0.15, 2, 2, 0.15, 2, -2, -0.15, 2, 2, 0.15, 2, 2, -0.15, 2, -2, -0.15, 2, 2, 0.15, -2, -2, 0.15, -2, 2, -0.15, -2, -2, 0.15, -2, -2, -0.15, -2, 2, -0.15, -2, 2, 0.15, 2, 2, 0.15, -2, 2, -0.15, 2, 2, 0.15, -2, 2, -0.15, -2, 2, -0.15, 2, -2, 0.15, -2, -2, 0.15, 2, -2, -0.15, -2, -2, 0.15, 2, -2, -0.15, 2, -2, -0.15, -2, 2, 0.15, 2, -2, 0.15, 2, 2, 0.15, -2, -2, 0.15, 2, -2, 0.15, -2, 2, 0.15, -2, -2, -0.15, 2, 2, -0.15, 2, -2, -0.15, -2, 2, -0.15, 2, 2, -0.15, -2, -2, -0.15, -2)
@@ -46,7 +50,7 @@ environment = SubResource("Environment_jyhfs")
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(-0.944039, 0, -0.331686, 0, 1, 0, 0.331686, 0, -0.944039, 0.315388, 1, -0.679698)
+transform = Transform3D(0.990657, 0, -0.141736, 0, 1, 0, 0.141736, 0, 0.990657, 0.315388, 1, -0.679698)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
@@ -72,6 +76,12 @@ transform = Transform3D(0.00999774, 0.0169729, 1.16534e-05, -0.000212162, 0.7950
 mesh = SubResource("CylinderMesh_tefeu")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod/MeshInstance3D2"]
+physics_material_override = SubResource("PhysicsMaterial_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fisher Rod/MeshInstance3D2"]
+physics_interpolation_mode = 1
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_tefeu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
