@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://1gljbhde3431"]
+[gd_scene load_steps=3 format=3 uid="uid://cup3ujdqtop76"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qhqgy"]
 size = Vector3(0.3, 0.3, 0.3)
@@ -13,7 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0.4)
 
 [node name="LeftHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
-tracker = &"/user/hand_tracker/left"
+tracker = &"left_hand"
 
 [node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand"]
 
@@ -22,7 +22,7 @@ mesh = SubResource("BoxMesh_qhqgy")
 
 [node name="RightHand" type="XRController3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
-tracker = &"/user/hand_tracker/right"
+tracker = &"right_hand"
 
 [node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
 
