@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://djrhidq0wmmol"]
+
+[ext_resource type="PackedScene" uid="uid://k0uuh5q87mjd" path="res://assets/3d_models/Dingus the cat.glb" id="1_ppi71"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ppi71"]
+size = Vector3(1.84027, 2.12061, 3.448)
+
+[node name="Dingus" instance=ExtResource("1_ppi71")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126312, 1.01756, -0.401733)
+shape = SubResource("BoxShape3D_ppi71")
