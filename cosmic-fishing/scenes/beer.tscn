@@ -20,5 +20,6 @@ script = ExtResource("2_31xl2")
 [node name="BEER" parent="." instance=ExtResource("1_7v8bv")]
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0739922, 0.0443952)
 emitting = false
 mesh = SubResource("QuadMesh_31xl2")
