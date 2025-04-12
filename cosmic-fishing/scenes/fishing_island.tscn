@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b8yi8r0ysf4k0"]
+[gd_scene load_steps=19 format=3 uid="uid://b8yi8r0ysf4k0"]
 
 [ext_resource type="PackedScene" uid="uid://bjwomr5hex8qj" path="res://scenes/floating_island.tscn" id="1_cusal"]
 [ext_resource type="PackedScene" uid="uid://bg0gniqk2b84p" path="res://scenes/chair.tscn" id="2_if3nh"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cx6h0lx5mb2n1" path="res://scenes/flowers/flower_1.tscn" id="14_33bhx"]
 [ext_resource type="PackedScene" uid="uid://bduccv5xf77e2" path="res://scenes/toilet.tscn" id="15_pt7ob"]
 [ext_resource type="PackedScene" uid="uid://cwgf4fubnhfuc" path="res://scenes/bridge.tscn" id="16_ynb76"]
+[ext_resource type="PackedScene" uid="uid://b3s6nemella2q" path="res://scenes/grass/grass_small.tscn" id="17_g346q"]
+[ext_resource type="PackedScene" uid="uid://lrmajfhpu1to" path="res://scenes/grass/grass_large_extruded.tscn" id="18_ammdg"]
 
 [node name="FishingIsland" type="Node3D"]
 
@@ -23,7 +25,7 @@
 transform = Transform3D(15, 0, 0, 0, 9.22, 0, 0, 0, 15, 0, 2.31982, 0)
 
 [node name="Chair" parent="." instance=ExtResource("2_if3nh")]
-transform = Transform3D(-0.0361841, -0.0104228, -0.999291, -0.276795, 0.960929, 0, 0.960248, 0.276598, -0.0376553, 5.22478, 7.75695, 0.429237)
+transform = Transform3D(-0.0361841, -0.0104228, -0.999291, -0.276795, 0.960929, 0, 0.960248, 0.276598, -0.0376553, 5.22478, 7.48325, 0.429237)
 
 [node name="NormalTree_1" parent="." instance=ExtResource("3_akdl5")]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 1.40005, 7.3034, 5.73699)
@@ -66,3 +68,9 @@ transform = Transform3D(0.229098, 0, 0.973403, 0, 1, 0, -0.973403, 0, 0.229098, 
 
 [node name="Bridge" parent="." instance=ExtResource("16_ynb76")]
 transform = Transform3D(-0.000189122, 0.000128266, -0.00799674, 0.00125254, 0.00790074, 9.71038e-05, 0.00789908, -0.00124974, -0.000206858, 0.438304, 4.23703, -9.59551)
+
+[node name="Grass_Small" parent="." instance=ExtResource("17_g346q")]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 7.32542, 0)
+
+[node name="Grass_Large_Extruded" parent="." instance=ExtResource("18_ammdg")]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 1.18314, 7.264, 0)
