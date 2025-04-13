@@ -11,9 +11,4 @@ func send_request():
 
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	print(int(json))
 	return int(json)
-
-
-func _on_button_pressed() -> void:
-	send_request()
