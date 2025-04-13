@@ -8,6 +8,8 @@ extends Node3D
 
 signal catch_fish
 
+signal kill_rod
+
 func _ready() -> void:
 	ray_cast_mesh.visible = false
 
@@ -22,8 +24,4 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	catch_fish.emit()
-	#delete and respawn fishing rod.
-
-
-func _on_button_pressed() -> void:
-	catch_fish.emit()
+	kill_rod.emit()
