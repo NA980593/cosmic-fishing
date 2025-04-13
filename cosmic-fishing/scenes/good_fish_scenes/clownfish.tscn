@@ -7,6 +7,7 @@
 radius = 1.58223
 
 [node name="PickableObject" groups=["fish"] instance=ExtResource("1_e2tnl")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_e2tnl")
