@@ -55,7 +55,7 @@ transform = Transform3D(15.6086, 12.5049, 0, -12.5049, 15.6086, 0, 0, 0, 20, -33
 transform = Transform3D(-15.6086, -12.5049, -1.74846e-06, -12.5049, 15.6086, 0, 1.36455e-06, 1.09321e-06, -20, 338.636, -41.9581, -0.678085)
 
 [node name="Better_Rod_Pick" parent="." instance=ExtResource("12_eb6dy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86609, 19.5546, 44.0998)
+transform = Transform3D(1, 0, 0, 0, 0.29344, 0.955978, 0, -0.955978, 0.29344, 1.86609, 19.5546, 44.0998)
 
 [node name="RodCaster" parent="Better_Rod_Pick" instance=ExtResource("13_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 0, 1.51456, 0)
@@ -63,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 
 [node name="FishPicker" parent="." instance=ExtResource("14_jbj1t")]
 
 [node name="FishSpawner" parent="FishPicker" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 47.4647)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 31.0123)
 
 [node name="QrngRequest" parent="FishPicker" instance=ExtResource("14_jkv2x")]
 
