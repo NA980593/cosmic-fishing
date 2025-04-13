@@ -8,7 +8,7 @@ var xr_interface: XRInterface
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
 	if xr_interface and xr_interface.is_initialized():
-		print("OpenXR initialized successfully")
+		testing_values_in_vr.set_label("OpenXR initialized successfully")
 
 		# Turn off v-sync!
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
@@ -16,7 +16,7 @@ func _ready():
 		# Change our main viewport to output to the HMD
 		get_viewport().use_xr = true
 	else:
-		print("OpenXR not initialized, please check if your headset is connected")
+		testing_values_in_vr.set_label("OpenXR not initialized, please check if your headset is connected")
 
 
 func _on_qrng_request_print_viewport(num) -> void:
