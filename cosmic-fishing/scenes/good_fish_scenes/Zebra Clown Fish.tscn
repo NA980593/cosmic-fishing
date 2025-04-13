@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgr6fomde03sm"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_ora60"]
+[ext_resource type="PackedScene" uid="uid://d2dj67w6w3ipj" path="res://assets/3d_models/good-fish/Zebra Clown Fish.glb" id="2_c63fr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4wsfl"]
+radius = 1.7
+
+[node name="PickableObject" instance=ExtResource("1_ora60")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_4wsfl")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_c63fr")]

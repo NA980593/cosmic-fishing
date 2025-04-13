@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg2kjunxif1vb"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_en1h6"]
+[ext_resource type="PackedScene" uid="uid://bws4m4lyhofpm" path="res://assets/3d_models/good-fish/Shark.glb" id="2_qh0iu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fo8au"]
+radius = 1.9
+
+[node name="PickableObject" instance=ExtResource("1_en1h6")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_fo8au")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_qh0iu")]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://e5kiamdhteru"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_tj44h"]
+[ext_resource type="PackedScene" uid="uid://bwgo5le2rsgkk" path="res://assets/3d_models/good-fish/Trout.glb" id="2_orq85"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sv0n6"]
+radius = 1.8
+
+[node name="PickableObject" instance=ExtResource("1_tj44h")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_sv0n6")
+
+[node name="Trout" parent="." index="1" instance=ExtResource("2_orq85")]
+transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0, 0, 0)
