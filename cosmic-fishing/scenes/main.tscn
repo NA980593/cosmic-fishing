@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=15 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -7,10 +7,11 @@
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bj64nt20s20gh" path="res://scenes/bobber_holder.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
-[ext_resource type="Script" uid="uid://uim4yxb6s8n0" path="res://scripts/beer_spawner.gd" id="7_ya4ey"]
-[ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
+[ext_resource type="Script" path="res://scripts/beer_spawner.gd" id="7_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://4oxj7bd1hpa4" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://c6njpf2yggh3q" path="res://scenes/better_rod_pick.tscn" id="12_eb6dy"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
 sky_material = ExtResource("2_tipki")
@@ -68,3 +69,6 @@ transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 
 
 [node name="Human with VR headset" parent="." instance=ExtResource("10_choun")]
 transform = Transform3D(-1.08823e-06, -4.52099e-07, -20, -12.5054, 15.6082, 3.27617e-07, 15.6082, 12.5054, -1.13195e-06, 0.00999832, -41.9581, -489.804)
+
+[node name="Better_Rod_Pick" parent="." instance=ExtResource("12_eb6dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86609, 19.5546, 44.0998)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp2sf0ha0hvpp"]
+
+[ext_resource type="Script" uid="uid://cc4wlyahsvevc" path="res://scripts/rod_caster.gd" id="1_hy50d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy50d"]
+albedo_color = Color(0.767025, 1.49205e-06, 3.85046e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6w01l"]
+material = SubResource("StandardMaterial3D_hy50d")
+size = Vector3(0.05, 200, 0.05)
+
+[node name="RodCaster" type="Node3D"]
+script = ExtResource("1_hy50d")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -1000, 0)
+collision_mask = 16
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RayCastMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+visible = false
+mesh = SubResource("BoxMesh_6w01l")

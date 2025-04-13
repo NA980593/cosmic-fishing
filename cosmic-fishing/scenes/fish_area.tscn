@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://mqg2i1r4ad3q" path="res://scripts/fish_area.gd" id="1_87i0i"]
 
 [node name="FishArea" type="Area3D"]
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_87i0i")
 
 [node name="FishTimer" type="Timer" parent="."]
