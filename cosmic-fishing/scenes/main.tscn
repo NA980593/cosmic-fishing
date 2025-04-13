@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=19 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://4oxj7bd1hpa4" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c6njpf2yggh3q" path="res://scenes/better_rod_pick.tscn" id="12_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://dp2sf0ha0hvpp" path="res://scenes/rod_caster.tscn" id="13_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://b5qyaqmeseqqd" path="res://scenes/fish_picker.tscn" id="14_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://gg7657hwrkww" path="res://scenes/quantum/qrng_request.tscn" id="14_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://dc47bwlaiwmxp" path="res://scenes/fish_spawner.tscn" id="15_jbj1t"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
 sky_material = ExtResource("2_tipki")
@@ -81,4 +83,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86609, 19.5546, 44.0998)
 [node name="RodCaster" parent="Better_Rod_Pick" instance=ExtResource("13_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 0, 1.51456, 0)
 
-[node name="QrngRequest" parent="." instance=ExtResource("14_jkv2x")]
+[node name="FishPicker" parent="." instance=ExtResource("14_jbj1t")]
+
+[node name="FishSpawner" parent="FishPicker" instance=ExtResource("15_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 47.4647)
+
+[node name="QrngRequest" parent="FishPicker" instance=ExtResource("14_jkv2x")]
+
+[connection signal="catch_fish" from="Better_Rod_Pick/RodCaster" to="FishPicker" method="_on_rod_caster_catch_fish"]
+[connection signal="got_number" from="FishPicker/QrngRequest" to="FishPicker" method="_on_qrng_request_got_number"]

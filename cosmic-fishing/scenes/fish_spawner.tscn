@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc47bwlaiwmxp"]
+
+[ext_resource type="Script" uid="uid://cqdrxu4o71y1r" path="res://scripts/fish_spawner.gd" id="1_mwyhs"]
+
+[node name="FishSpawner" type="Node3D"]
+script = ExtResource("1_mwyhs")

@@ -2,6 +2,8 @@ extends Node
 
 @onready var http_request: HTTPRequest = $HTTPRequest
 
+signal got_number
+
 func _ready() -> void:
 	http_request.request_completed.connect(_on_request_completed)
 
@@ -11,4 +13,4 @@ func send_request():
 
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	return int(json)
+	emit_signal("got_number",int(json))

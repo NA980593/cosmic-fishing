@@ -22,4 +22,4 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	emit_signal("catch_fish")
-	get_tree().reload_current_scene()
+	#delete and respawn fishing rod.

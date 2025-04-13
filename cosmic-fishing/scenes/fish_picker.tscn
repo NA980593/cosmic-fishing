@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5qyaqmeseqqd"]
+
+[ext_resource type="Script" uid="uid://d0ksy5nip3x50" path="res://scripts/fish_picker.gd" id="1_spnry"]
+
+[node name="FishPicker" type="Node"]
+script = ExtResource("1_spnry")
