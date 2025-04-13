@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=14 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bj64nt20s20gh" path="res://scenes/bobber_holder.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://uim4yxb6s8n0" path="res://scripts/beer_spawner.gd" id="7_ya4ey"]
 [ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
@@ -53,7 +54,10 @@ metadata/_custom_type_script = "uid://cnc4c762noq2r"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000153959, 1.9679, -3.48687e-05)
 gravity_scale = 0.0
 
-[node name="Beer" parent="." instance=ExtResource("7_o6xl0")]
+[node name="BeerSpawner" type="Node3D" parent="."]
+script = ExtResource("7_ya4ey")
+
+[node name="Beer" parent="BeerSpawner" instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.7996, 46.4524)
 gravity_scale = 0.0
 
