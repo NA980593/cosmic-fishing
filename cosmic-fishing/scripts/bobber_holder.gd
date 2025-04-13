@@ -4,7 +4,7 @@ var bobber = preload("res://scenes/bobber.tscn")
 
 var speed_multiplier = 10.0
 
-func launch(force):
+func launch():
 	var b = bobber.instance()
 	get_tree().get_root().add_child(b)
 	var bobber_holder_velocity = get_linear_velocity()

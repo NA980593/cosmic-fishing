@@ -44,7 +44,6 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, -0.0431141, -1.66334)
-second_hand_grab = 2
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="Fisher Rod"]
 transform = Transform3D(-0.291423, 0, 0.956594, 0, 1, 0, -0.956594, 0, -0.291423, -0.0793543, 0.161905, 0.0309656)
@@ -94,7 +93,6 @@ omni_attenuation = 0.3
 [node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25387, -1.27766)
 gravity_scale = 0.0
-second_hand_grab = 2
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
 transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 0.153755, -2.43414)
