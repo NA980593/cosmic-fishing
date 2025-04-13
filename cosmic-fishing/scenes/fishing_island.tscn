@@ -121,3 +121,5 @@ shape = SubResource("BoxShape3D_p65up")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2057, 0, 0)
 shape = SubResource("BoxShape3D_p65up")
+
+[connection signal="body_entered" from="Area3D" to="BeerSpawner/Beer" method="_on_area_3d_body_entered"]

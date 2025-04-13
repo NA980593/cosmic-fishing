@@ -7,3 +7,6 @@ func _physics_process(delta: float) -> void:
 		beer_particles.emitting = true
 	else:
 		beer_particles.emitting = false
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	get_parent().theBeerMaker()
