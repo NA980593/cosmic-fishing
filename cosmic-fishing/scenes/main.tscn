@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=13 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://4oxj7bd1hpa4" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
 sky_material = ExtResource("2_tipki")
@@ -58,3 +59,6 @@ gravity_scale = 0.0
 transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 19.6995, 45.2959)
 
 [node name="FishingMap" parent="." instance=ExtResource("9_85g3d")]
+
+[node name="Human with VR headset" parent="." instance=ExtResource("10_choun")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00999832, -5.97453, -45.7396)

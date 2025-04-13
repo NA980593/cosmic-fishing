@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://4oxj7bd1hpa4"]
+
+[ext_resource type="PackedScene" uid="uid://dotilknhw2qxs" path="res://assets/3d_models/Human with VR headset.glb" id="1_xl8jt"]
+
+[node name="Human with VR headset" instance=ExtResource("1_xl8jt")]
+
+[node name="mesh1063886806" parent="." index="0"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="High-end_headset_01_Cube_027" parent="." index="1"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
