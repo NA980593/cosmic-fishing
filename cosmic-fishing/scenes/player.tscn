@@ -49,4 +49,3 @@ script = ExtResource("1_dqkch")
 
 [node name="MovementTurn" parent="RightHand" instance=ExtResource("7_fjrip")]
 turn_mode = 2
-input_action = "secondary"
