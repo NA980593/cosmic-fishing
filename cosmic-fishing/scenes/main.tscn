@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://chsh3tl4xgia2" path="res://assets/3d_models/pokeball.glb" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
 panorama = ExtResource("2_sugp2")
@@ -52,7 +52,7 @@ environment = SubResource("Environment_jyhfs")
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(-0.857241, 0, 0.516285, 0, 1, 0, -0.516285, 0, -0.857241, 0.315388, 1, -0.679698)
+transform = Transform3D(0.544258, 0, -0.839481, 0, 1, 0, 0.839481, 0, 0.544258, 0.315388, 1, -0.679698)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Fisher Rod"]
 
@@ -121,7 +121,7 @@ omni_range = 5.672
 omni_attenuation = 0.3
 
 [node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(-0.791939, 0, -0.610638, 0, 1, 0, 0.610638, 0, -0.791939, 0, 1, -1)
+transform = Transform3D(0.979205, 0, 0.201892, 0, 1, 0, -0.201892, 0, 0.979205, 0, 1, -1)
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
 transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 1.39506, -2.43414)
