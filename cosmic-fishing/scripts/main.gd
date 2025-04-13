@@ -32,4 +32,7 @@ func _on_timer_timeout() -> void:
 	print(name)
 	var scene = load("res://scenes/better_rod_pick.tscn")
 	var instance = scene.instantiate()
+	var scene2 = load("res://scenes/rod_caster.tscn")
+	var instance2 = scene.instantiate()
+	instance.add_child(instance2)
 	$rod_spawner.add_child(instance)
