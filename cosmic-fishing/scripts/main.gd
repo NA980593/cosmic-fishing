@@ -20,6 +20,10 @@ func _ready():
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
 
+func _process(delta: float) -> void:
+	if $XROrigin3D/RightHand.button_pressed == "ax_button":
+		$"Fisher Rod/BobberHolder".launch()
+	
 
 func _physics_process(delta: float) -> void:
 	testing_values_in_vr.set_label(str(bobber_holder.get_linear_velocity()))
