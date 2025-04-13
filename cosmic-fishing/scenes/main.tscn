@@ -59,7 +59,6 @@ transform = Transform3D(-15.6086, -12.5049, -1.74846e-06, -12.5049, 15.6086, 0, 
 transform = Transform3D(1, 0, 0, 0, 0.944526, 0.328438, 0, -0.328438, 0.944526, 1.86609, 19.5546, 44.0998)
 
 [node name="RodCaster" parent="Better_Rod_Pick" instance=ExtResource("13_a8y0u")]
-transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 0, 1.51456, 0)
 
 [node name="FishPicker" parent="." instance=ExtResource("14_jbj1t")]
 
