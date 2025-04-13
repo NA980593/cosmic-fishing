@@ -69,14 +69,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 47.4647)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+text = "button"
 
 [connection signal="catch_fish" from="Better_Rod_Pick/RodCaster" to="FishPicker" method="_on_rod_caster_catch_fish"]
 [connection signal="got_number" from="FishPicker/QrngRequest" to="FishPicker" method="_on_qrng_request_got_number"]
