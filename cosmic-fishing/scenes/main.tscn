@@ -44,6 +44,7 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05895, -0.705491)
+second_hand_grab = 2
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="Fisher Rod"]
 transform = Transform3D(-0.291423, 0, 0.956594, 0, 1, 0, -0.956594, 0, -0.291423, -0.0793543, 0.161905, 0.0309656)
@@ -57,7 +58,8 @@ hand = 1
 metadata/_custom_type_script = "uid://cnc4c762noq2r"
 
 [node name="BobberHolder" parent="Fisher Rod" instance=ExtResource("6_tipki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96705, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000153959, 1.9679, -3.48687e-05)
+gravity_scale = 0.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.984808, -0.173648, 0, -0.0593912, -0.336824, 0.939693, -0.163176, -0.925417, -0.34202, 0, 50, 0)
@@ -90,6 +92,8 @@ omni_attenuation = 0.3
 
 [node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24354, 0)
+gravity_scale = 0.0
+second_hand_grab = 2
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
 transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 1.39506, -2.43414)
