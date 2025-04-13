@@ -22,4 +22,4 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	testing_values_in_vr.set_label(str(bobber_holder.linear_velocity))
+	testing_values_in_vr.set_label(str(bobber_holder.get_linear_velocity()))
