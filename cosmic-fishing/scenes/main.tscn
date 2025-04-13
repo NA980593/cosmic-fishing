@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.5457, 47.7301)
 [node name="BeerSpawner" type="Node3D" parent="." groups=["beer"]]
 script = ExtResource("7_ya4ey")
 
-[node name="Beer" parent="BeerSpawner" groups=["beer"] instance=ExtResource("7_o6xl0")]
+[node name="Beer" parent="BeerSpawner" instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.7996, 46.4524)
 gravity_scale = 0.0
 
