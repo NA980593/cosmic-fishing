@@ -24,15 +24,9 @@ func _on_qrng_request_print_viewport(num) -> void:
 
 
 func _on_rod_caster_kill_rod() -> void:
-	$Better_Rod_Pick.queue_free()
+	$Better_Rod_Pick/RodCaster.visible = false
 	$Timer.start()
 
 
 func _on_timer_timeout() -> void:
-	print(name)
-	var scene = load("res://scenes/better_rod_pick.tscn")
-	var instance = scene.instantiate()
-	var scene2 = load("res://scenes/rod_caster.tscn")
-	var instance2 = scene.instantiate()
-	instance.add_child(instance2)
-	$rod_spawner.add_child(instance)
+	$Better_Rod_Pick/RodCaster.visible = true
