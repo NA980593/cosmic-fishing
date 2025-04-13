@@ -12,6 +12,7 @@
 [node name="XROrigin3D" type="XROrigin3D"]
 
 [node name="PlayerBody" parent="." instance=ExtResource("1_ur7pv")]
+collision_mask = 1019
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.7, 0.4)
