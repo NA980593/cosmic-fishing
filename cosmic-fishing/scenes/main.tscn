@@ -7,8 +7,8 @@
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bj64nt20s20gh" path="res://scenes/bobber_holder.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
 sky_material = ExtResource("2_tipki")
@@ -34,6 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2942, 47.7301)
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, 23.2511, 46.0667)
+picked_up_layer = 65540
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="Fisher Rod"]
 transform = Transform3D(-0.291423, 0, 0.956594, 0, 1, 0, -0.956594, 0, -0.291423, -0.0793543, 0.161905, 0.0309656)
