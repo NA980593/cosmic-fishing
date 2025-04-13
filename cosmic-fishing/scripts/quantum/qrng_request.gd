@@ -15,6 +15,7 @@ func send_request():
 	var x = http_request.request("https://quantum-flask.onrender.com/home")
 	emit_signal("print_viewport", x)
 
-func _on_request_completed(result, response_code, headers, body):
+func _on_request_completed(result, _response_code, _headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	emit_signal("got_number",int(json))
+	print(int(json))
