@@ -9,7 +9,7 @@ func add_asset(asset):
 	fish_arr.append(asset)
 
 func _ready():
-	var dir = DirAccess.open("res://scenes/fish_pickable/")
+	var dir = DirAccess.open("res://assets/3d_models/good-fish/")
 	fish_arr = dir.get_files()
 
 func get_random_fish():
