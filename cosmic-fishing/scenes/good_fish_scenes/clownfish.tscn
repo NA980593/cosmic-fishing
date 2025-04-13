@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c74neyi6gge4l"]
+[gd_scene load_steps=4 format=3 uid="uid://dfy7dydnjclu3"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_e2tnl"]
 [ext_resource type="PackedScene" uid="uid://e0vfm7kgt46t" path="res://assets/3d_models/good-fish/Clownfish.glb" id="2_yjf0s"]
@@ -6,8 +6,8 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_e2tnl"]
 radius = 1.58223
 
-[node name="PickableObject" groups=["fish"] instance=ExtResource("1_e2tnl")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="PickableObject3" groups=["fish"] instance=ExtResource("1_e2tnl")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_e2tnl")

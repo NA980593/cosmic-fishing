@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpp83s0j5ytcp"]
+[gd_scene load_steps=4 format=3 uid="uid://3k41hwkylwax"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_06hig"]
 [ext_resource type="PackedScene" uid="uid://blmaonmqyxiw7" path="res://assets/3d_models/good-fish/Piranha.glb" id="2_85vgu"]
@@ -6,8 +6,8 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_06hig"]
 radius = 1.75183
 
-[node name="PickableObject" groups=["fish"] instance=ExtResource("1_06hig")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="PickableObject3" groups=["fish"] instance=ExtResource("1_06hig")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_06hig")
