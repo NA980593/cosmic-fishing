@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=17 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://4oxj7bd1hpa4" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c6njpf2yggh3q" path="res://scenes/better_rod_pick.tscn" id="12_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://dp2sf0ha0hvpp" path="res://scenes/rod_caster.tscn" id="13_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://gg7657hwrkww" path="res://scenes/quantum/qrng_request.tscn" id="14_jkv2x"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
 sky_material = ExtResource("2_tipki")
@@ -75,3 +77,8 @@ transform = Transform3D(-15.6086, -12.5049, -1.74846e-06, -12.5049, 15.6086, 0, 
 
 [node name="Better_Rod_Pick" parent="." instance=ExtResource("12_eb6dy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86609, 19.5546, 44.0998)
+
+[node name="RodCaster" parent="Better_Rod_Pick" instance=ExtResource("13_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 0, 1.51456, 0)
+
+[node name="QrngRequest" parent="." instance=ExtResource("14_jkv2x")]
