@@ -83,4 +83,5 @@ text = "button"
 
 [connection signal="catch_fish" from="Better_Rod_Pick/RodCaster" to="FishPicker" method="_on_rod_caster_catch_fish"]
 [connection signal="got_number" from="FishPicker/QrngRequest" to="FishPicker" method="_on_qrng_request_got_number"]
+[connection signal="print_viewport" from="FishPicker/QrngRequest" to="." method="_on_qrng_request_print_viewport"]
 [connection signal="pressed" from="Control/Button" to="Better_Rod_Pick/RodCaster" method="_on_button_pressed"]

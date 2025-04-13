@@ -17,3 +17,7 @@ func _ready():
 		get_viewport().use_xr = true
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
+
+
+func _on_qrng_request_print_viewport(num) -> void:
+	testing_values_in_vr.set_label(num)
