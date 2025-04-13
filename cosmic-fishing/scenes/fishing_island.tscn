@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b8yi8r0ysf4k0"]
+[gd_scene load_steps=26 format=3 uid="uid://b8yi8r0ysf4k0"]
 
 [ext_resource type="PackedScene" uid="uid://bjwomr5hex8qj" path="res://scenes/floating_island.tscn" id="1_cusal"]
 [ext_resource type="PackedScene" uid="uid://bg0gniqk2b84p" path="res://scenes/chair.tscn" id="2_if3nh"]
@@ -20,7 +20,17 @@
 [ext_resource type="PackedScene" uid="uid://lrmajfhpu1to" path="res://scenes/grass/grass_large_extruded.tscn" id="18_ammdg"]
 [ext_resource type="PackedScene" uid="uid://bgci3qv08gwa1" path="res://scenes/beer.tscn" id="19_ammdg"]
 [ext_resource type="PackedScene" uid="uid://djrhidq0wmmol" path="res://scenes/dingus.tscn" id="20_njxkt"]
+[ext_resource type="Script" uid="uid://uim4yxb6s8n0" path="res://scripts/beer_spawner.gd" id="20_p65up"]
 [ext_resource type="PackedScene" uid="uid://bowx1u2xee3hd" path="res://scenes/cardboard_box_open.tscn" id="21_6jryo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6jryo"]
+size = Vector3(25.9325, 30, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qfwgu"]
+size = Vector3(24.208, 1, 48)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p65up"]
+size = Vector3(1, 30, 48)
 
 [node name="FishingIsland" type="Node3D"]
 
@@ -78,7 +88,10 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 [node name="Grass_Large_Extruded" parent="." instance=ExtResource("18_ammdg")]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 1.18314, 7.264, 0)
 
-[node name="Beer" parent="." instance=ExtResource("19_ammdg")]
+[node name="BeerSpawner" type="Node3D" parent="."]
+script = ExtResource("20_p65up")
+
+[node name="Beer" parent="BeerSpawner" instance=ExtResource("19_ammdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71571, 7.52964, -0.10755)
 
 [node name="Dingus" parent="." instance=ExtResource("20_njxkt")]
@@ -86,3 +99,25 @@ transform = Transform3D(-0.175101, 0, 0.780602, 0, 0.8, 0, -0.780602, 0, -0.1751
 
 [node name="Cardboard Box Open" parent="." instance=ExtResource("21_6jryo")]
 transform = Transform3D(5.75326, 0.422702, 1.64965, -0.537898, 5.96574, 0.347306, -1.61576, -0.480914, 5.7583, -1.64801, 7.294, 0.969571)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.968)
+shape = SubResource("BoxShape3D_6jryo")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46625, 0, -21)
+shape = SubResource("BoxShape3D_6jryo")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604, -3, 0)
+shape = SubResource("BoxShape3D_qfwgu")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2388, 0, 0)
+shape = SubResource("BoxShape3D_p65up")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2057, 0, 0)
+shape = SubResource("BoxShape3D_p65up")
