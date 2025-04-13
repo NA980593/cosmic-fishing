@@ -20,12 +20,3 @@ func _ready():
 		get_viewport().use_xr = true
 	else:
 		print("OpenXR not initialized, please check if your headset is connected")
-
-func _process(delta: float) -> void:
-	if $XROrigin3D/RightHand.button_pressed == "ax_button" and bobber_holder.bobbing == false:
-		bobber_holder.launch()
-		await get_tree().create_timer(2).timeout
-	
-
-func _physics_process(delta: float) -> void:
-	testing_values_in_vr.set_label(str(bobber_holder.get_linear_velocity()))

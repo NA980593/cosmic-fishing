@@ -11,5 +11,5 @@ func destroy():
 		self.get_child(0).queue_free()
 
 func beerSavior():
-	var beer_instance = beer.instance()
+	var beer_instance = beer.instantiate()
 	self.add_child(beer_instance)
