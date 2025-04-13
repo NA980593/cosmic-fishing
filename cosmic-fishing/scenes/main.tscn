@@ -45,6 +45,7 @@ gravity_scale = 0.0
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
 transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 19.6995, 45.2959)
+visible = false
 
 [node name="FishingMap" parent="." instance=ExtResource("9_85g3d")]
 
@@ -55,7 +56,7 @@ transform = Transform3D(15.6086, 12.5049, 0, -12.5049, 15.6086, 0, 0, 0, 20, -33
 transform = Transform3D(-15.6086, -12.5049, -1.74846e-06, -12.5049, 15.6086, 0, 1.36455e-06, 1.09321e-06, -20, 338.636, -41.9581, -0.678085)
 
 [node name="Better_Rod_Pick" parent="." instance=ExtResource("12_eb6dy")]
-transform = Transform3D(1, 0, 0, 0, 0.29344, 0.955978, 0, -0.955978, 0.29344, 1.86609, 19.5546, 44.0998)
+transform = Transform3D(1, 0, 0, 0, 0.944526, 0.328438, 0, -0.328438, 0.944526, 1.86609, 19.5546, 44.0998)
 
 [node name="RodCaster" parent="Better_Rod_Pick" instance=ExtResource("13_a8y0u")]
 transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 0, 1.51456, 0)
@@ -63,25 +64,19 @@ transform = Transform3D(1, 0, 0, 0, -0.637935, -0.77009, 0, 0.77009, -0.637935, 
 [node name="FishPicker" parent="." instance=ExtResource("14_jbj1t")]
 
 [node name="FishSpawner" parent="FishPicker" instance=ExtResource("15_jbj1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 31.0123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 44.549)
 
 [node name="QrngRequest" parent="FishPicker" instance=ExtResource("14_jkv2x")]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="rod_spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67754, 19.4993, 44.5196)
 
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "button"
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
 
 [connection signal="catch_fish" from="Better_Rod_Pick/RodCaster" to="FishPicker" method="_on_rod_caster_catch_fish"]
+[connection signal="kill_rod" from="Better_Rod_Pick/RodCaster" to="." method="_on_rod_caster_kill_rod"]
 [connection signal="got_number" from="FishPicker/QrngRequest" to="FishPicker" method="_on_qrng_request_got_number"]
 [connection signal="print_viewport" from="FishPicker/QrngRequest" to="." method="_on_qrng_request_print_viewport"]
-[connection signal="pressed" from="Control/Button" to="Better_Rod_Pick/RodCaster" method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

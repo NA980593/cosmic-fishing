@@ -21,3 +21,15 @@ func _ready():
 
 func _on_qrng_request_print_viewport(num) -> void:
 	testing_values_in_vr.set_label(str(num))
+
+
+func _on_rod_caster_kill_rod() -> void:
+	$Better_Rod_Pick.queue_free()
+	$Timer.start()
+
+
+func _on_timer_timeout() -> void:
+	print(name)
+	var scene = load("res://scenes/better_rod_pick.tscn")
+	var instance = scene.instantiate()
+	$rod_spawner.add_child(instance)
