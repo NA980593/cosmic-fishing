@@ -436,3 +436,7 @@ func _get_grab_point(grabber : Node3D, current : XRToolsGrabPoint) -> XRToolsGra
 func _set_ranged_grab_method(new_value: int) -> void:
 	ranged_grab_method = new_value
 	can_ranged_grab = new_value != RangedMethod.NONE
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	get_parent().theBeerMaker()
