@@ -20,4 +20,4 @@ func _ready():
 
 
 func _on_qrng_request_print_viewport(num) -> void:
-	testing_values_in_vr.set_label(num)
+	testing_values_in_vr.set_label(str(num))
