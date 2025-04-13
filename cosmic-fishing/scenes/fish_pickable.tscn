@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2uij0oqlp2pf"]
+[gd_scene load_steps=3 format=3 uid="uid://bhybrj1kf28n2"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_l87nw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_61xlh"]
 
-[node name="PickableObject" instance=ExtResource("1_l87nw")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_l87nw")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_61xlh")
