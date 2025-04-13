@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_2hr3r"]
 radius = 1.7
 
-[node name="PickableObject" instance=ExtResource("1_juy4g")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_juy4g")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_2hr3r")

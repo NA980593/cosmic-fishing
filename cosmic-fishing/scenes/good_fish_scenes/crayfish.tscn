@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://f4fknvsusoei"]
+[gd_scene load_steps=4 format=3 uid="uid://dxdb3i36mg6tm"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_q5xqu"]
 [ext_resource type="PackedScene" uid="uid://qf8m0ltm8guv" path="res://assets/3d_models/good-fish/Crayfish.glb" id="2_l2gjh"]
@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_q5xqu"]
 radius = 30.9687
 
-[node name="PickableObject" instance=ExtResource("1_q5xqu")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_q5xqu")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_q5xqu")

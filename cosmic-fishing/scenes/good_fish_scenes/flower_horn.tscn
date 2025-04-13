@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc77g3ga7xrtu"]
+[gd_scene load_steps=4 format=3 uid="uid://d3j64sd3ns0s0"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_im7gh"]
 [ext_resource type="PackedScene" uid="uid://vvon3jscin5e" path="res://assets/3d_models/good-fish/Flower Horn.glb" id="2_1wx6s"]
@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_im7gh"]
 radius = 1.81385
 
-[node name="PickableObject" instance=ExtResource("1_im7gh")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_im7gh")]
 
 [node name="Root Scene" parent="." index="0" instance=ExtResource("2_1wx6s")]
 

@@ -7,6 +7,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$Sprite3D.show()
 		$DingusTimer.wait_time = 5
 		$DingusTimer.start()
+		body.instantiate()
 		
 	elif body.is_in_group("fish"):
 		body.queue_free()
@@ -23,3 +24,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_dingus_timer_timeout() -> void:
 	$Sprite3D.hide()
+	

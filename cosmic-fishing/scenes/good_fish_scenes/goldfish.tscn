@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs6cgodk7tqgu"]
+[gd_scene load_steps=4 format=3 uid="uid://c6pwx2dn3ejp1"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_vb3ql"]
 [ext_resource type="PackedScene" uid="uid://do1wpu2q00lhk" path="res://assets/3d_models/good-fish/Goldfish.glb" id="2_2gfay"]
@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_1iqdl"]
 radius = 1.68103
 
-[node name="PickableObject" instance=ExtResource("1_vb3ql")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_vb3ql")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_1iqdl")

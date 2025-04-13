@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbov80l1go0m6"]
+[gd_scene load_steps=4 format=3 uid="uid://7aodwxlnhwk5"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_bvtql"]
 [ext_resource type="PackedScene" uid="uid://cv4abur0yh6su" path="res://assets/3d_models/good-fish/Goblin Shark.glb" id="2_lokp3"]
@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_35m6x"]
 radius = 1.91101
 
-[node name="PickableObject" instance=ExtResource("1_bvtql")]
+[node name="PickableObject" groups=["fish"] instance=ExtResource("1_bvtql")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_35m6x")
