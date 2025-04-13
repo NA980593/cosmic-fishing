@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuqfq283amdhs"]
+[gd_scene load_steps=4 format=3 uid="uid://pftvs2d1ucfj"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_kraye"]
 [ext_resource type="PackedScene" uid="uid://gu7nkwhoxwbb" path="res://assets/3d_models/good-fish/Armored Catfish.glb" id="2_5q3x4"]
@@ -7,6 +7,7 @@
 radius = 2.16362
 
 [node name="PickableObject" groups=["fish"] instance=ExtResource("1_kraye")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("SphereShape3D_5q3x4")
