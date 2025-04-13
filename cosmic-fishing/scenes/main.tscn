@@ -67,8 +67,11 @@ transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 
 
 [node name="FishingMap" parent="." instance=ExtResource("9_85g3d")]
 
-[node name="Human with VR headset" parent="." instance=ExtResource("10_choun")]
-transform = Transform3D(-1.08823e-06, -4.52099e-07, -20, -12.5054, 15.6082, 3.27617e-07, 15.6082, 12.5054, -1.13195e-06, 0.00999832, -41.9581, -489.804)
+[node name="Human with VR headset2" parent="." instance=ExtResource("10_choun")]
+transform = Transform3D(15.6086, 12.5049, 0, -12.5049, 15.6086, 0, 0, 0, 20, -330.064, -41.9581, 24.9754)
+
+[node name="Human with VR headset3" parent="." instance=ExtResource("10_choun")]
+transform = Transform3D(-15.6086, -12.5049, -1.74846e-06, -12.5049, 15.6086, 0, 1.36455e-06, 1.09321e-06, -20, 338.636, -41.9581, -0.678085)
 
 [node name="Better_Rod_Pick" parent="." instance=ExtResource("12_eb6dy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86609, 19.5546, 44.0998)
