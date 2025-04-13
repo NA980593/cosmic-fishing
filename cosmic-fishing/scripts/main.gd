@@ -6,6 +6,7 @@ var xr_interface: XRInterface
 
 @onready var testing_values_in_vr: Node3D = $TestingValuesInVR
 @onready var bobber_holder: RigidBody3D = $"Fisher Rod/BobberHolder"
+@onready var fishing_area = $FishingMap/FishArea
 
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
@@ -21,8 +22,9 @@ func _ready():
 		print("OpenXR not initialized, please check if your headset is connected")
 
 func _process(delta: float) -> void:
-	if $XROrigin3D/RightHand.button_pressed == "ax_button":
-		$"Fisher Rod/BobberHolder".launch()
+	if $XROrigin3D/RightHand.button_pressed == "ax_button" and bobber_holder.bobbing == false:
+		bobber_holder.launch()
+		await get_tree().create_timer(2).timeout
 	
 
 func _physics_process(delta: float) -> void:
