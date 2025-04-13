@@ -5,9 +5,9 @@
 [ext_resource type="Material" uid="uid://chwyh783pm6sv" path="res://shaders/space_shader_material.tres" id="2_tipki"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://uim4yxb6s8n0" path="res://scripts/beer_spawner.gd" id="7_ya4ey"]
-[ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://4oxj7bd1hpa4" path="res://scenes/human_with_vr_headset.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c6njpf2yggh3q" path="res://scenes/better_rod_pick.tscn" id="12_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://dp2sf0ha0hvpp" path="res://scenes/rod_caster.tscn" id="13_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://b5qyaqmeseqqd" path="res://scenes/fish_picker.tscn" id="14_jbj1t"]
@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.5457, 47.7301)
 [node name="BeerSpawner" type="Node3D" parent="." groups=["beer"]]
 script = ExtResource("7_ya4ey")
 
-[node name="Beer" parent="BeerSpawner" groups=["beer"] instance=ExtResource("7_o6xl0")]
+[node name="Beer" parent="BeerSpawner" instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.7996, 46.4524)
 gravity_scale = 0.0
 
@@ -67,5 +67,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.3257, 47.4647)
 
 [node name="QrngRequest" parent="FishPicker" instance=ExtResource("14_jkv2x")]
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="catch_fish" from="Better_Rod_Pick/RodCaster" to="FishPicker" method="_on_rod_caster_catch_fish"]
 [connection signal="got_number" from="FishPicker/QrngRequest" to="FishPicker" method="_on_qrng_request_got_number"]
+[connection signal="pressed" from="Control/Button" to="Better_Rod_Pick/RodCaster" method="_on_button_pressed"]

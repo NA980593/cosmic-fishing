@@ -23,3 +23,7 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	catch_fish.emit()
 	#delete and respawn fishing rod.
+
+
+func _on_button_pressed() -> void:
+	catch_fish.emit()
