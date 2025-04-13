@@ -63,9 +63,6 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 [node name="NormalTree_10" parent="." instance=ExtResource("7_y0y3l")]
 transform = Transform3D(99.3361, -1.37139e-06, 11.5041, -11.248, 20.9823, 97.1248, -2.41383, -97.7739, 20.843, -17.1753, 2.56648, 24.099)
 
-[node name="NormalTree_11" parent="." instance=ExtResource("7_y0y3l")]
-transform = Transform3D(100, 0, 0, 0, 20.9823, 97.7739, 0, -97.7739, 20.9823, -9.21805, 0.742459, 23.1013)
-
 [node name="NormalTree_12" parent="." instance=ExtResource("6_xera7")]
 transform = Transform3D(100, 0, 0, 0, 18.0897, 98.3502, 0, -98.3502, 18.0897, 14.2545, 1.26622, 27.3899)
 

@@ -4,8 +4,8 @@
 
 [sub_resource type="QuadMesh" id="QuadMesh_anwgj"]
 size = Vector2(54, 54)
-subdivide_width = 50
-subdivide_depth = 50
+subdivide_width = 25
+subdivide_depth = 25
 orientation = 1
 
 [node name="WaterPlane" type="MeshInstance3D"]
