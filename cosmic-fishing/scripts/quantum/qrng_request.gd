@@ -17,5 +17,4 @@ func send_request():
 
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	emit_signal("print_viewport", json)
 	emit_signal("got_number",int(json))
