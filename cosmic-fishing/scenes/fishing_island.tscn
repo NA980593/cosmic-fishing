@@ -92,10 +92,10 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 [node name="BeerSpawner" type="Node3D" parent="."]
 script = ExtResource("20_p65up")
 
-[node name="Beer" parent="BeerSpawner" instance=ExtResource("19_ammdg")]
+[node name="Beer" parent="BeerSpawner" groups=["beer"] instance=ExtResource("19_ammdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71571, 7.52964, -0.10755)
 
-[node name="BeerPick" parent="BeerSpawner" instance=ExtResource("21_p65up")]
+[node name="BeerPick" parent="BeerSpawner" groups=["beer"] instance=ExtResource("21_p65up")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57521, 7.24869, 2.29598)
 
 [node name="Dingus" parent="." instance=ExtResource("20_njxkt")]
