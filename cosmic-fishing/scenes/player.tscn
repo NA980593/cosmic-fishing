@@ -33,6 +33,7 @@ script = ExtResource("1_dqkch")
 [node name="LeftHand" parent="LeftHand" instance=ExtResource("3_dqkch")]
 
 [node name="MovementDirect" parent="LeftHand" instance=ExtResource("4_tuyoq")]
+max_speed = 5.0
 strafe = true
 
 [node name="RightHand" type="XRController3D" parent="."]

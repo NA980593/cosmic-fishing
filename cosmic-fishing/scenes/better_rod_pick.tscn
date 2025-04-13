@@ -4,17 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://bctp65q7kdoxx" path="res://scenes/better_rod.tscn" id="2_1pkq6"]
 [ext_resource type="PackedScene" uid="uid://dp2sf0ha0hvpp" path="res://scenes/rod_caster.tscn" id="3_1pkq6"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_2365v"]
-height = 2.25
-radius = 0.15
+[sub_resource type="BoxShape3D" id="BoxShape3D_1pkq6"]
+size = Vector3(0.24939, 1.60754, 0.177002)
 
 [node name="Better_Rod_Pick" instance=ExtResource("1_xm3f1")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06747, 0)
-shape = SubResource("CylinderShape3D_2365v")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0494995, 0.737697, 0.00012207)
+shape = SubResource("BoxShape3D_1pkq6")
 
 [node name="better-rod" parent="." index="1" instance=ExtResource("2_1pkq6")]
 
 [node name="RodCaster" parent="." index="2" instance=ExtResource("3_1pkq6")]
-transform = Transform3D(1, 0, 0, 0, -0.712026, -0.702153, 0, 0.702153, -0.712026, 0, 2.19112, 0)
+transform = Transform3D(1, 0, 0, 0, -0.712026, -0.702153, 0, 0.702153, -0.712026, 0, 1.5175, 0)
