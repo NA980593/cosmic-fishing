@@ -14,10 +14,10 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_7v8bv")
 size = Vector2(0.05, 0.05)
 
-[node name="Beer" type="Node3D"]
+[node name="Beer" type="Node3D" groups=["beer"]]
 script = ExtResource("2_31xl2")
 
-[node name="BEER" parent="." instance=ExtResource("1_7v8bv")]
+[node name="BEER" parent="." groups=["beer"] instance=ExtResource("1_7v8bv")]
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0739922, 0.0443952)
