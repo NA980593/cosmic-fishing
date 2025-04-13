@@ -26,10 +26,10 @@ script = ExtResource("1_rtd14")
 environment = SubResource("Environment_jyhfs")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2942, 47.7301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.5457, 47.7301)
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, 23.2511, 46.0667)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, 19.5026, 46.0667)
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="Fisher Rod"]
 transform = Transform3D(-0.291423, 0, 0.956594, 0, 1, 0, -0.956594, 0, -0.291423, -0.0793543, 0.161905, 0.0309656)
@@ -47,10 +47,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000153959, 1.9679, -3.4868
 gravity_scale = 0.0
 
 [node name="Beer" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.5481, 46.4524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.7996, 46.4524)
 gravity_scale = 0.0
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
-transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 23.448, 45.2959)
+transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 19.6995, 45.2959)
 
 [node name="FishingMap" parent="." instance=ExtResource("9_85g3d")]
