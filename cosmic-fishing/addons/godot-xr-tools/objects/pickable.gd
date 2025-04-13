@@ -440,3 +440,4 @@ func _set_ranged_grab_method(new_value: int) -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	get_parent().theBeerMaker()
+	

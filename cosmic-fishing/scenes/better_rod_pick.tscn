@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcg2pxiitgioo"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_xm3f1"]
+[ext_resource type="PackedScene" path="res://scenes/better_rod.tscn" id="2_1pkq6"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2365v"]
+height = 2.25
+radius = 0.15
+
+[node name="Better_Rod_Pick" instance=ExtResource("1_xm3f1")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06747, 0)
+shape = SubResource("CylinderShape3D_2365v")
+
+[node name="better-rod" parent="." index="1" instance=ExtResource("2_1pkq6")]
