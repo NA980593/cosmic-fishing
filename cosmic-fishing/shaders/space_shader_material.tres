@@ -4,7 +4,7 @@
 
 [resource]
 shader = ExtResource("1_rw8x7")
-shader_parameter/sky_color = Color(0.03, 0.05, 0.11, 1)
+shader_parameter/sky_color = Color(0.235148, 0.258192, 0.447579, 1)
 shader_parameter/star_base_color = Color(0.925127, 1, 0.799202, 1)
 shader_parameter/star_hue_offset = 0.141
 shader_parameter/star_intensity = 0.08

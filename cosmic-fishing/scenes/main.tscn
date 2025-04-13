@@ -1,34 +1,23 @@
-[gd_scene load_steps=15 format=3 uid="uid://b68l54kgs7v57"]
+[gd_scene load_steps=12 format=3 uid="uid://b68l54kgs7v57"]
 
 [ext_resource type="Script" uid="uid://cujfx5piu5uft" path="res://scripts/main.gd" id="1_rtd14"]
 [ext_resource type="PackedScene" uid="uid://1gljbhde3431" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://c2ocdwvb71mcg" path="res://assets/beautiful-shining-stars-night-sky.jpg" id="2_sugp2"]
-[ext_resource type="PackedScene" path="res://scenes/fishing_rod.tscn" id="4_jyhfs"]
+[ext_resource type="Material" uid="uid://chwyh783pm6sv" path="res://shaders/space_shader_material.tres" id="2_tipki"]
+[ext_resource type="PackedScene" uid="uid://c65jnni6x4r4y" path="res://scenes/fishing_rod.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://cnc4c762noq2r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bj64nt20s20gh" path="res://scenes/bobber_holder.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://chdxtqgx0edk8" path="res://scenes/beer_pick.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jyhfs"]
-panorama = ExtResource("2_sugp2")
+[ext_resource type="PackedScene" uid="uid://3rtpjm1we343" path="res://scenes/testing_values_in_vr.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://doty8itlvipra" path="res://scenes/fishing_map.tscn" id="9_85g3d"]
 
 [sub_resource type="Sky" id="Sky_sugp2"]
-sky_material = SubResource("PanoramaSkyMaterial_jyhfs")
+sky_material = ExtResource("2_tipki")
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
 background_mode = 2
 sky = SubResource("Sky_sugp2")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyhfs"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
-material = SubResource("StandardMaterial3D_jyhfs")
-size = Vector3(7, 0.5, 7)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
-size = Vector3(9.86926, 1, 8.32672)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_rtd14")
@@ -41,9 +30,10 @@ shadow_enabled = true
 environment = SubResource("Environment_jyhfs")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2942, 47.7301)
 
 [node name="Fisher Rod" parent="." instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, -0.0431141, -1.66334)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000943661, 23.2511, 46.0667)
 
 [node name="XRToolsGrabPointHand" type="Marker3D" parent="Fisher Rod"]
 transform = Transform3D(-0.291423, 0, 0.956594, 0, 1, 0, -0.956594, 0, -0.291423, -0.0793543, 0.161905, 0.0309656)
@@ -60,39 +50,11 @@ metadata/_custom_type_script = "uid://cnc4c762noq2r"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000153959, 1.9679, -3.48687e-05)
 gravity_scale = 0.0
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(0.984808, -0.173648, 0, -0.0593912, -0.336824, 0.939693, -0.163176, -0.925417, -0.34202, 0, 50, 0)
-light_energy = 1.323
-light_indirect_energy = 2.131
-light_size = 0.066
-distance_fade_enabled = true
-distance_fade_begin = 164.12
-distance_fade_length = 50.0
-spot_range = 9.389
-spot_attenuation = 2.62
-spot_angle = 65.0
-spot_angle_attenuation = 1.18921
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.30139, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("BoxMesh_tbgi4")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03424, 0.5, 0.109222)
-shape = SubResource("BoxShape3D_jyhfs")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.773519, 2.04944, -3.0226)
-omni_range = 5.672
-omni_attenuation = 0.3
-
-[node name="PickableObject" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25387, -1.27766)
+[node name="Beer" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.5481, 46.4524)
 gravity_scale = 0.0
 
 [node name="TestingValuesInVR" parent="." instance=ExtResource("8_tipki")]
-transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 0.153755, -2.43414)
+transform = Transform3D(1, 0, 0, 0, 0.704523, 0.709681, 0, -0.709681, 0.704523, 0, 23.448, 45.2959)
+
+[node name="FishingMap" parent="." instance=ExtResource("9_85g3d")]
