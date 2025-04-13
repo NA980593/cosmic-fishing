@@ -3,7 +3,7 @@ extends Node3D
 @onready var beer_particles: CPUParticles3D = $CPUParticles3D
 
 func _physics_process(delta: float) -> void:
-	if abs(rad_to_deg(rotation.x)) > 35 or abs(rad_to_deg(rotation.y)) > 35 or abs(rad_to_deg(rotation.z)) > 35:
+	if abs(rad_to_deg(global_rotation.x)) > 35 or abs(rad_to_deg(global_rotation.y)) > 35 or abs(rad_to_deg(global_rotation.z)) > 35:
 		beer_particles.emitting = true
 	else:
 		beer_particles.emitting = false

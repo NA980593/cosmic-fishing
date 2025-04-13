@@ -2,10 +2,7 @@ extends Node3D
 
 var xr_interface: XRInterface
 
-@onready var fisher_rod: XRToolsPickable = $"Fisher Rod"
-
 @onready var testing_values_in_vr: Node3D = $TestingValuesInVR
-@onready var bobber_holder: RigidBody3D = $"Fisher Rod/BobberHolder"
 @onready var fishing_area = $FishingMap/FishArea
 
 func _ready():
