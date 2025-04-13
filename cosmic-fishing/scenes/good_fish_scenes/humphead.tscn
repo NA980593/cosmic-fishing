@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://15kxnlvqgk5n"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_mpm2w"]
+[ext_resource type="PackedScene" uid="uid://bwl656h6lxlde" path="res://assets/3d_models/good-fish/Humphead.glb" id="2_f3k01"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ac3ni"]
+radius = 1.89535
+
+[node name="PickableObject" instance=ExtResource("1_mpm2w")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_ac3ni")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_f3k01")]

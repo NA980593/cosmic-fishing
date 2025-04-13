@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba6vu85bluvim"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_jry6r"]
+[ext_resource type="PackedScene" uid="uid://do2fhlkebj6xo" path="res://assets/3d_models/good-fish/Moorish Idol.glb" id="2_p6ffh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_meut8"]
+radius = 1.71837
+
+[node name="PickableObject" instance=ExtResource("1_jry6r")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_meut8")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_p6ffh")]

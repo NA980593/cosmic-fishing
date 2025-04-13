@@ -9,7 +9,7 @@ func add_asset(asset):
 	fish_arr.append(asset)
 
 func _ready():
-	var dir = DirAccess.open("res://assets/3d_models/good-fish/")
+	var dir = DirAccess.open("res://scenes/good_fish_scenes/")
 	fish_arr = dir.get_files()
 
 func get_random_fish():
@@ -17,7 +17,6 @@ func get_random_fish():
 
 func _on_rod_caster_catch_fish() -> void:
 	get_random_fish()
-
 
 func _on_qrng_request_got_number(number) -> void:
 	fish_spawner.spawn(fish_arr[number])

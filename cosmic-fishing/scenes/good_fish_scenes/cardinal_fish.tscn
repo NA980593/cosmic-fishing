@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://biny8upfms6kr"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_iqcv8"]
+[ext_resource type="PackedScene" uid="uid://bu68wiaydnfjl" path="res://assets/3d_models/good-fish/Cardinal Fish.glb" id="2_eabxb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iqcv8"]
+radius = 1.80672
+
+[node name="PickableObject" instance=ExtResource("1_iqcv8")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_iqcv8")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_eabxb")]

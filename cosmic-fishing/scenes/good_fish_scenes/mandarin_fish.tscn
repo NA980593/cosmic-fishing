@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bef0asud8f8sw"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_ts5lr"]
+[ext_resource type="PackedScene" uid="uid://dtjf5hl5h34kj" path="res://assets/3d_models/good-fish/Mandarin Fish.glb" id="2_o5j4r"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fpa41"]
+radius = 1.60499
+
+[node name="PickableObject" instance=ExtResource("1_ts5lr")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_fpa41")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_o5j4r")]
