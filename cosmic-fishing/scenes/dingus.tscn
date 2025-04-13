@@ -7,7 +7,7 @@
 size = Vector3(1.84027, 2.12061, 3.448)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dcuoi"]
-size = Vector3(1.4, 1.2, 1.2)
+size = Vector3(2.2, 2, 2)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ee1nh"]
 viewport_path = NodePath("SubViewport")
