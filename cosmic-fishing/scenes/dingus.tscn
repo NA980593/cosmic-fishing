@@ -1,14 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://djrhidq0wmmol"]
+[gd_scene load_steps=6 format=3 uid="uid://djrhidq0wmmol"]
 
 [ext_resource type="PackedScene" uid="uid://k0uuh5q87mjd" path="res://assets/3d_models/Dingus the cat.glb" id="1_ppi71"]
+[ext_resource type="Script" uid="uid://p5c5qf7hgicr" path="res://scripts/dingus_eater.gd" id="2_dcuoi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ppi71"]
 size = Vector3(1.84027, 2.12061, 3.448)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dcuoi"]
+size = Vector3(1.4, 1.2, 1.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ee1nh"]
+viewport_path = NodePath("SubViewport")
+
 [node name="Dingus" instance=ExtResource("1_ppi71")]
+script = ExtResource("2_dcuoi")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126312, 1.01756, -0.401733)
 shape = SubResource("BoxShape3D_ppi71")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45459, 1.24777)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("BoxShape3D_dcuoi")
+
+[node name="SubViewport" type="SubViewport" parent="." index="3"]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="Label" type="Label" parent="SubViewport" index="0"]
+offset_right = 256.0
+offset_bottom = 256.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52135, 2.36274, 2.02583)
+visible = false
+texture = SubResource("ViewportTexture_ee1nh")
+
+[node name="DingusTimer" type="Timer" parent="." index="5"]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="DingusTimer" to="." method="_on_dingus_timer_timeout"]
