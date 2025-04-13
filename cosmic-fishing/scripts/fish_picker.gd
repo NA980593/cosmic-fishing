@@ -11,6 +11,7 @@ func add_asset(asset):
 func _ready():
 	var dir = DirAccess.open("res://scenes/good_fish_scenes/")
 	fish_arr = dir.get_files()
+	print(fish_arr)
 
 func get_random_fish():
 	qrng_request.send_request()
